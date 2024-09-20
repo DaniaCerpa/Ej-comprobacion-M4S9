@@ -21,6 +21,8 @@ def guardar_info(archivo, formato):
         except FileExistsError:
             print(f"No es posible crear el archivo {archivo}.{formato} porque ya existe uno previo con este nombre.\nPorfavor intenta con otro nombre")
 
+        except Exception as e:
+            print("Error: ", e)
 
 
 def agregar_info(archivo, formato):
@@ -50,7 +52,9 @@ def agregar_info(archivo, formato):
             
         except FileExistsError:
             print(f"No es posible crear el archivo {archivo}.{formato} porque ya existe uno previo con este nombre.\nPorfavor intenta con otro nombre")
-    
+
+        except Exception as e:
+            print("Error: ", e)
     
     
     
